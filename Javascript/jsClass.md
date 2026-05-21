@@ -8,6 +8,8 @@ Las etiquetas para poder incluir JavaScript en el HTML son
     alert('hello, world')
 </script>
 
+##Implementación de atributos en elementos HTML para interactuar con JS.
+
 Para implementar interacción de forma simple con elementos del HTML, se puede incluir atributos en la etiqueta de apertura del elemento, por ejemplo:
 
 <button onclick="hello()">Click Here</button>
@@ -20,6 +22,35 @@ También podemos cambiar el contenido de un elemento de HTML, utilizando los com
             function hello(){
                 document.querySelector('h1').innerHTML='Goodbye!'
                 /*La lectura sería: dentro del documento. haremos una selección del elemento 'h1'. Luego haremos un cambio del contenido de dicho elemento por = 'Goodbye!' */
+            }
+
+        </script>
+
+Ahora podemos intercambiar valores, utilizando condicionales dentro de la función 'hello()':
+
+<script>
+            function hello(){
+                if (document.querySelector('h1').innerHTML === 'Hello!' ){
+                    
+                    document.querySelector('h1').innerHTML='Goodbye!'
+                }else{
+                    document.querySelector('h1').innerHTML='Hello!'
+                }
+            }
+
+        </script>
+
+##Código optimizado
+
+<script>
+            function hello(){
+                let heading= document.querySelector('h1')
+                if (heading.innerHTML === 'Hello!' ){
+                    
+                    heading.innerHTML='Goodbye!'
+                }else{
+                    heading.innerHTML='Hello!'
+                }
             }
 
         </script>
