@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<title>Counter</title>
+    <title>Counter</title>
 
-<script>
-    let counter=0
-    function count(){
-        let heading =document.querySelector('h1')
-        counter++
-        heading.innerHTML=counter
-        
-    }
+    <script>
+        let counter = 0
+        function count() {
+            let heading = document.querySelector('h1')
+            counter++
+            heading.innerHTML = counter
 
-</script>
+        }
+        document.querySelector('button').onclick = count
+
+    </script>
 </head>
+
 <body>
     <h1>0</h1>
-    <button onclick="count()">Count</button>
+    <button>Count</button>
 </body>
+
 </html>
