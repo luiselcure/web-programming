@@ -45,3 +45,31 @@ function mult(a=0,b=0){
 
 let result= mult(5,10)
 console.log(result)
+
+//Nest Functions
+function extern(){
+    console.log("External Function")
+    function intern(){
+        console.log("Internal Function")
+    }
+    intern()
+}
+extern()
+
+//Higher -order functions
+function applyfunc(func, param){
+    func(param)
+}
+applyfunc(myFunc3, "Función de orden superior")
+
+//forEeach
+
+myArray = [1, 2, 3, 4, 5]
+
+
+
+myArray.forEach(function(value){/*Forma amplificada de la función para iterrar dentre de cada valor de un array*/
+        console.log(value)
+})
+
+myArray.forEach((value) => console.log(value))/*Forma simplificada de la función para iterrar dentre de cada valor de un array*/
