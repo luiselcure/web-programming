@@ -72,6 +72,12 @@ console.log(`La tasa de cambio para la cantidad solicitada es de ${exchange}`)
 // Respuesta esperada: esPalindromo("Radar") -> true; esPalindromo("JavaScript") -> false
 // ----------------------------------------------------------------------------
 
+function isPalindrome(word){
+    const original= word.split("")
+    const reverse =original.reverse()
+    return original === reverse
+}
+console.log("Para el caso estudiado el resultado del palíndrome es: ",isPalindrome("Radar"))
 
 // EJERCICIO 7: Filtrar números pares (Callback)
 // Consigna: Crea una función llamada 'filtrarArreglo' que acepte un arreglo de números 
